@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GenreController;
+use App\Http\Controllers\SongController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +15,6 @@ use App\Http\Controllers\GenreController;
 |
 */
 
-Route::get('/genres', [GenreController::class, 'show']);
+Route::get('/genres', [GenreController::class, 'showGenres']);
+Route::get('/genres/{genre_id}', [GenreController::class, 'showSongs']);
+Route::get('/songs/detailpage/{song_id}', [SongController::class, 'show']);

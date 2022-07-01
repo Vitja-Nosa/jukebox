@@ -7,9 +7,10 @@
     <title>Genres - Jukebox</title>
 </head>
 <body>
+    <h1>Genres</h1>
     <ul>
         @foreach($genres as $genre)
-        <li><a href="#">{{$genre->name}}</a></li>
+        <li><a href="genres/{{$genre->id}}">{{$genre->name}}</a></li>
         @endforeach
     </ul>
 </body>
